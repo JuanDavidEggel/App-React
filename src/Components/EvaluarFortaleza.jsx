@@ -4,10 +4,10 @@ export function EvaluarFortaleza({ password }) { //Recibo la prop password desde
         return <p>Debe ingresar una contraseña</p>;
     }
 
-    const tieneNumero = /[0-9]/.test(password); //.test para saber si existe dentro del texto al menos un número del 0 al 9
-    const tieneMinuscula = /[a-z]/.test(password);
     const tieneMayuscula = /[A-Z]/.test(password);
-    const tieneCaracterEspecial = /[!@#$%^&*()_\-+=?.,:;{}~`|<>/]/.test(password);
+    const tieneMinuscula = /[a-z]/.test(password);
+    const tieneNumero = /[0-9]/.test(password); //.test para saber si existe dentro del texto al menos un número del 0 al 9
+    const tieneCaracterEspecial = /[!@#$%^&*()_+]/.test(password);
     const largo = password.length >= 15;
     
     let puntaje = 0;

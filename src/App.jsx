@@ -1,5 +1,9 @@
 import './App.css' //importa estilos CSS
 import { useState } from 'react'; //importa el hook useState de React
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 import { IngresarContrasena } from './Components/IngresarContrasena'; //importa el componenete donde escribo la contraseña
 import { EvaluarFortaleza} from './Components/EvaluarFortaleza'; //importa el componenete que evalúa la fortaleza de la contraseña
 import { Checklist } from './Components/Checklist'; //importa el componente checklist que muestra los requisitos de la contraseña 
@@ -10,14 +14,22 @@ function App() {
   const [password, setPassword] = useState(''); //se crea un estado que empieza vacío. En password se tiene un valor inicial y 
   // setPassword es una función para actualizar el estado
   return (
-        <div className="App">
-          <h1>Fortaleza de Contraseña</h1>
-          <IngresarContrasena password={password} setPassword={setPassword} /> {/*se pasa password y la función setPassword como props*/}
-          <CopiarContrasena password={password} /> {/*se pasa password como prop para que el componente pueda copiar la contraseña al portapapeles*/}
-          <EvaluarFortaleza password={password} /> {/*se pasa password como prop para evaluar la contraseña*/} 
-          <GeneradorPro setPassword={setPassword} /> {/*se pasa setPassword como prop para que el componente pueda generar una contraseña y actualizar el estado password en App*/}
-          <Checklist password={password} /> {/*se pasa password como prop para que el componente pueda mostrar qué requisitos se cumplen o no*/}
-        </div>
+        <Container fluid className="pantalla">
+          <Row className="justify-content-center align-items-center min-vh-100">
+            <Col md={8} lg={6}>
+              <div className="contenedor-principal">
+                <h1 className="titulo">Control de Seguridad de Contraseñas</h1>
+
+                <IngresarContrasena password={password} setPassword={setPassword} /> {/*se pasa password y la función setPassword como props*/}
+                <CopiarContrasena password={password} /> {/*se pasa password como prop para que el componente pueda copiar la contraseña al portapapeles*/}
+                <EvaluarFortaleza password={password} /> {/*se pasa password como prop para evaluar la contraseña*/} 
+                <GeneradorPro setPassword={setPassword} /> {/*se pasa setPassword como prop para que el componente pueda generar una contraseña y actualizar 
+                el estado password en App*/}
+                <Checklist password={password} /> {/*se pasa password como prop para que el componente pueda mostrar qué requisitos se cumplen o no*/}                
+              </div>
+            </Col>
+          </Row>
+        </Container>
   );
 }
 

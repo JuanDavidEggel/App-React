@@ -5,7 +5,8 @@ export function IngresarContrasena({ password, setPassword }) { //recibo props d
 
   return (
     <div className="contenedor-input">
-        <input //El input está vinculado al estado de React porque usa value y onChange. Value usa el estado (password) y onChange modifica el estado (setPassword) cada vez que el usuario escribe algo.
+        <input //El input está vinculado al estado de React porque usa value y onChange. Value usa el estado (password) y onChange modifica el 
+        // estado (setPassword) cada vez que el usuario escribe algo.
         type={mostrar ? "text" : "password"} 
         value={password} //muestra lo que hay guardado en password
         onChange={(e) => setPassword(e.target.value)} /*Cada vez que cambio el contenido del input, React ejecuta onChange, (e) representa el 

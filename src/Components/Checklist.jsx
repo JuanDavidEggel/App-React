@@ -10,9 +10,10 @@ export function Checklist({ password })  { //export permite que el componente pu
         <div>
             <p>Requisitos:</p>
             <ul>
-                <li style={{ color: tieneNumero ? "green" : "red" }}> {/*style es la propiedad JSX para aplicar CSS, las llaves externas indican que hay JavaScript
-                dentro de JSX, las llaves internas indican que voy a crear un objeto JavaScript, color es la propiedad CSS, : separa la propiedad del objeto (color) y el valor
-                del objeto (tieneNumero ? "green" : "red"), tieneNumero es la condición, ? opera si es verdadero o falso y según eso define si el color es verde o rojo*/}
+                <li style={{ color: tieneNumero ? "green" : "red" }}> {/*style es la propiedad JSX para aplicar CSS, las llaves externas indican que hay 
+                JavaScript dentro de JSX, las llaves internas indican que voy a crear un objeto JavaScript, color es la propiedad CSS, : separa la propiedad 
+                del objeto (color) y el valor del objeto (tieneNumero ? "green" : "red"), tieneNumero es la condición, ? opera si es verdadero o falso y 
+                según eso define si el color es verde o rojo*/}
                     Debe contener un número
                 </li> {/*color es la propiedad CSS, y tieneNumero ? "green" : "red" define el valor que tendrá esa propiedad*/}
                 <li style={{ color: tieneMinuscula ? "green" : "red" }}>

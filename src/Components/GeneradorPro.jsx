@@ -32,26 +32,33 @@ export function GeneradorPro({ setPassword }) {
     };
 
     return (
-        <div>
-            <h3>Generador Pro</h3>
+        <div className="generador-box">
+            <h3>Generador de contraseñas aleatorias</h3>
+
             <label>Largo:</label>
             <input
                 type="number"
                 value={largo}
-                onChange={(e) => setLargo(Number(e.target.value))} //Cuando el usuario cambia el valor del input, se ejecuta onChange y recibe un evento (e). e.target representa el input que disparó el evento. 
-                // e.target.value obtiene el nuevo valor que el usuario escribio. Number() convierte ese valor a número, y luego, setLargo actualiza el estado largo con ese nuevo numero.
+                onChange={(e) => setLargo(Number(e.target.value))} //Cuando el usuario cambia el valor del input, se ejecuta onChange y recibe un evento (e).
+                //e.target representa el input que disparó el evento. e.target.value obtiene el nuevo valor que el usuario escribio. Number() convierte 
+                //ese valor a número, y luego, setLargo actualiza el estado largo con ese nuevo numero.
             />
+
             <br />
+
             <label>
                 <input
                     type="checkbox"
                     checked={usarMayusculas}
-                    onChange={() => setUsarMayusculas(!usarMayusculas)} //Cuando el usuario hace click en el checkbox, se ejecuta onChange, que invierte el valor actual de usarMayusculas. Si usarMayusculas es true, se vuelve false, 
-                    // y viceversa. Esto permite al usuario activar o desactivar la inclusión de mayúsculas en la contraseña generada.
+                    onChange={() => setUsarMayusculas(!usarMayusculas)} //Cuando el usuario hace click en el checkbox, se ejecuta onChange, que invierte el
+                    //valor actual de usarMayusculas. Si usarMayusculas es true, se vuelve false, y viceversa. Esto permite al usuario activar o desactivar 
+                    //la inclusión de mayúsculas en la contraseña generada.
                 />
                 Mayúsculas
             </label>
+
             <br />
+
             <label>
                 <input
                     type="checkbox"
@@ -60,7 +67,9 @@ export function GeneradorPro({ setPassword }) {
                 />
                 Minúsculas
             </label>
+
             <br />
+
             <label>
                 <input
                     type="checkbox"
@@ -69,7 +78,9 @@ export function GeneradorPro({ setPassword }) {
                 />
                 Números
             </label>
+
             <br />
+
             <label>
                 <input
                     type="checkbox"
@@ -78,8 +89,10 @@ export function GeneradorPro({ setPassword }) {
                 />
                 Especiales
             </label>
+
             <br />
             <br />
+
             <button onClick={generarPassword}>
                 Generar contraseña
             </button>

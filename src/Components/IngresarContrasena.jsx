@@ -1,6 +1,6 @@
 import { useState } from 'react'; /*buscar desde React la función useState para crear estados locales en el componente*/
 
-export function IngresarContrasena({ password, setPassword }) { //recibo props desde App.jsx
+export function IngresarContrasena({ password, setPassword }) { //recibo props desde App.jsx / permito que este componente pueda usarse afuera / permite que App.jsx pueda usarlo
   const [mostrar, setMostrar] = useState(false); //estado local, controla si el texto del input se ve o no, y empieza en false (oculto)
 
   return (

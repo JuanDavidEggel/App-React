@@ -1,22 +1,22 @@
-import './App.css' //importa estilos CSS
+import './App.css' //trae estilos de App.css para aplicarlos a este componente
 import { useState } from 'react'; //importa el hook useState de React
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import { IngresarContrasena } from './Components/IngresarContrasena'; //importa el componenete donde escribo la contraseña
+import { IngresarContrasena } from './Components/IngresarContrasena'; //importa el componente donde escribo la contraseña / trae el componente IngresarContrasena desde el archivo IngresarContrasena.jsx
 import { EvaluarFortaleza} from './Components/EvaluarFortaleza'; //importa el componenete que evalúa la fortaleza de la contraseña
 import { Checklist } from './Components/Checklist'; //importa el componente checklist que muestra los requisitos de la contraseña 
-import { CopiarContrasena } from './Components/CopiarContrasena';
+import { CopiarContrasena } from './Components/CopiarContrasena'; //traigo algo desde otro archivo/libreria
 import { GeneradorPro } from './Components/GeneradorPro';
 
 function App() {
   const [password, setPassword] = useState(''); //se crea un estado que empieza vacío. En password se tiene un valor inicial y 
   // setPassword es una función para actualizar el estado
   return (
-        <Container fluid className="pantalla">
-          <Row className="justify-content-center align-items-center min-vh-100">
-            <Col md={8} lg={6}>
+        <Container className="pantalla">
+          <Row className="justify-content-center align-items-center">
+            <Col>
               <div className="contenedor-principal">
                 <h1 className="titulo">Control de Seguridad de Contraseñas</h1>
 

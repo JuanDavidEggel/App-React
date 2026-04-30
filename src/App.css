@@ -1,7 +1,7 @@
 .pantalla {
   min-height: 100vh;
   background-color: #1e1f3a;
-  padding: 40px 0;
+  padding: 40px;
 }
 
 .contenedor-principal {
@@ -32,9 +32,8 @@
   border-radius: 12px;
   background-color: #3a3d63;
 
-  width: 100%;
-  max-width: 400px;
-
+  width: 100%; /*Ocupa todo el ancho disponible*/
+  max-width: 400px; /*Hasta un maximo de 400px*/
 }
 
 input {

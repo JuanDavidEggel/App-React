@@ -3,7 +3,7 @@ export function Checklist({ password })  { //export permite que el componente pu
     const tieneNumero = /[0-9]/.test(password);
     const tieneMinuscula = /[a-z]/.test(password);
     const tieneMayuscula = /[A-Z]/.test(password);
-    const tieneCaracterEspecial = /[!@#$%^&*()_\-+=?.,:;{}~`|<>/]/.test(password);
+    const tieneCaracterEspecial = /[!@#$%^&*()_+]/.test(password);
     const largo = password.length >= 15;    
     
     return (
